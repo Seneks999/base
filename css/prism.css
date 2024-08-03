@@ -1,0 +1,48 @@
+body {
+  font-family: sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+pre,
+code {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.code-editor {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+pre {
+  background: #2d2d2d;
+  color: #ccc;
+  /* padding: 10px; */
+  /* border-radius: 5px; */
+  overflow-x: auto;
+}

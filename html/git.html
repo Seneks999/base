@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/git.css" />
+    <title>Git&GitHub</title>
+  </head>
+  <body>
+    <header><h1>Набори команд для GitHub</h1></header>
+    <main>
+      <nav>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+      </nav>
+
+      <!-- Приклад реальної роботи з GitHub -->
+      <h2>Приклад реальної роботи з GitHub</h2>
+      <p>Нам дали задачу зробити меню, ми це зробили і закомітили.</p>
+      <p>
+        Перший рік, може більше, ми не будемо маржити в гілку мейн самостійно.
+      </p>
+      <p>Як ми працюємо на командному проекті:</p>
+      <ul>
+        <li>Ми запушуємо зміни в нашу гілку</li>
+        <li>
+          Заходимо на репозиторій, де буде повідомлення, що наша гілка була
+          тільки що запушена, і зелена кнопка Compare & pull request.
+        </li>
+        <li>
+          пулл реквест, це запит до тім-ліда, на те, щоб він перевірив наш код,
+          і якщо він правильний, прийняв його в основну гілку.
+        </li>
+        <li>
+          Обираємо гілку, перевіряємо що конфліктів немає, з якоє в яку гілку ми
+          хочемо помістити код, і натискаємо кнопку Create pull request.
+        </li>
+        <li>Гарно його підписуємо.</li>
+        <li>
+          Можно вибрати людей які будуть перевіряти мій шматок коду, натискаємо
+          кнопку Create pull request.
+        </li>
+      </ul>
+      <!-- Створення гілки -->
+      <h2>Створення нової гілки, ...</h2>
+      <p>
+        <code>git branch "branchName"</code> - створює гілку з назвою
+        "branchName".
+      </p>
+      <hr />
+      <p>
+        <code>git checkout "branchName"</code> - переходить на гілку з назвою
+        "branchName".
+      </p>
+      <hr />
+      <p>
+        <code>git checkout -b "branchName"</code> - створює гілку з назвою
+        "branchName" і переходить на неї.
+      </p>
+      <hr />
+      <!-- Публікація на GitHub -->
+      <h2>Команди, щоб опублікувати свій footer на GitHub</h2>
+      <code>$ git add .</code>
+      <hr />
+      <p>To seal a commit, we must use the command:</p>
+      <code>$ git add commit -m "description of the commit"</code>
+      <hr />
+      <p><code>git push</code> - відправляємо на сайт github.</p>
+      <hr />
+      <p>
+        <code>git push --set-upstream origin header</code> або
+        <code>git push -u origin header</code> - створюємо на github гілку і
+        запушуємо код. Ця команда виконуєтся один раз після створення нової
+        гілки. Надалі файли запушуються без цієї команди.
+      </p>
+      <hr />
+      <!-- Зайти в гілку яку створив колега -->
+      <h2>Як зайти в гілку яку створив колега, та подивитись що у нього.</h2>
+      <p><code>git pull</code> - отримуємо останні зміни з сайту github.</p>
+      <hr />
+      <p>
+        <code>git checkout "branchName"</code> - переходить на гілку з назвою
+        "branchName".
+      </p>
+      <hr />
+      <p>git add та git commit, ми можемо записати однією командою</p>
+      <p>
+        <code>git commit -am "text commits"</code> - переходить на гілку з
+        назвою "branchName".
+      </p>
+      <hr />
+      <p><code>git push</code> - відправляємо на сайт github.</p>
+      <hr />
+      <p>Щоб зробити якісь дії в гілці, треба в ній знаходитись.</p>
+      <hr />
+      <p>
+        Якщо у нас, наприклад був відкритий файл index.html, і в гілці в яку ми
+        переходимо теж є файл index.html, то у нас буде відкритий файл
+        index.html тої гілки, в яку ми перейшли.
+      </p>
+      <hr />
+      <!-- Замарджити зміни -->
+      <h2>
+        Як зміни які ми робили в своїй гілці зарелізити в основну гілку (опісля
+        перевірки ментором).
+      </h2>
+      <p>Ми маємо знаходитись в тій гілці в яку ми хочемо зробити marge.</p>
+      <p>
+        <code>git checkout main</code> - зливаємо гілку з назвою "branchName" в
+        поточну гілку.
+      </p>
+      <p>Перевіряємо, чи дійсно ми в гілці main</p>
+      <p>
+        <code>git branch</code>
+      </p>
+      <p>
+        <code>git marge "banchName"</code> - зливаємо гілку з назвою
+        "branchName" в поточну гілку.
+      </p>
+      <p>
+        У нас залишаєтся код в гілці main, і до нього додаєтся код який ми
+        зробили.
+      </p>
+      <p>Після marge нам необхідно сайт опублікувати в інтернеті.</p>
+      <p>Якщо ми забули, що нам теба робити, ми вводимо команду:</p>
+      <p><code>git status</code> - видає підказку, що до наступної команди.</p>
+      <p><code>git push</code> .</p>
+      <p>
+        <code>git marge "banchName"</code> - зливаємо гілку з назвою
+        "branchName" в поточну гілку.
+      </p>
+      <hr />
+      <!-- Як видалити гілку -->
+      <h2>Як видалити гілку.</h2>
+      <p>
+        Наприклад, ми замерчили з гілки, і вона нам більше не потрібна. Нам
+        треба виділити дві гілки публічну і локальну.
+      </p>
+      <ol>
+        <li>Треба знаходитись не в тій гілці яку ми збираємось видаляти.</li>
+        <li>Видалити гілку з репозиторію на GitHub.</li>
+      </ol>
+      <p>
+        <code>git branch -b "branchName"</code> - видалення гілки з компьютера.
+      </p>
+      <p>
+        <code>git branch --delete origin "branchName"</code> - видалення гілки з
+        репозиторію.
+      </p>
+      <p>
+        <code>git push origin --delete "branchName"</code> - видалення гілки з
+        репозиторію другий спосіб.
+      </p>
+      <hr />
+      <p>
+        Перед кожним marge робити перевірку командою <code>git status</code>.
+        Всі зміни треба зберігти перед marge. (Робимо коміт та пуш).
+      </p>
+      <p>
+        Далі маємо знаходитись не тій гілці яку мерджім, і після цього merge
+        потрібну гілку.
+      </p>
+      <p>
+        <code>git push origin --delete "branchName"</code> - видалення гілки з
+        репозиторію другий спосіб.
+      </p>
+      <hr />
+      <h2>Конфлікти merge та їх вирішення</h2>
+      <p>Можно відкотити назад власний merge.</p>
+      <p><code>git merge --abbort</code> - відміняємо merge (злиття гілок).</p>
+      <hr />
+      <!-- Вирішення конфлікту -->
+      <p>
+        Два шматки коду, які виділені різними кольорами, зверху над
+        конфліктуючими блоками 5 варіантів дій, з яких можно вибрати одну. Ось
+        ці варіанти:
+      </p>
+      <ol>
+        <li>Accept Change. Прийняти зміни.</li>
+        <li>Accept Incoming Change. Прийняти вхідні зміни.</li>
+        <li>Accept Both Changes. Прийняти обидві зміни.</li>
+        <li>Compare Changes. Порівняти Зміни.</li>
+        <li>Start Live Share Session. Почати сеанс прямого ефіру.</li>
+      </ol>
+
+      <ul>
+        <li><code>git status</code></li>
+        <li><code>git add . </code> або <code>git add file-name.ex;</code></li>
+        <li><code>git commit -am "text commits"</code></li>
+        <li><code>git push</code></li>
+      </ul>
+      <p>
+        Після того, як ми пофіксили конфлікт, нам треба ці зміни зафиксувати
+        (додати add, підписати commit, відправити push на GidHub).
+      </p>
+      <p>
+        Потім видалити непотрібн гілку локально на компьютері, та на GitHub.
+      </p>
+
+      <p>
+        <code>git branch -b "branchName"</code> - видалення гілки з компьютера.
+      </p>
+      <p>
+        <code>git branch --delete origin "branchName"</code> - видалення гілки з
+        репозиторію.
+      </p>
+      <p>
+        <code>git push origin --delete "branchName"</code> - видалення гілки з
+        репозиторію другий спосіб.
+      </p>
+
+      <hr />
+      <p>
+        <code>git slash</code> - зберігаємо не збережені зміни в файлах і
+        кладемо їх в буфер обміну.
+      </p>
+      <hr />
+      <p>
+        <code>git stash apply</code> - вставляємо збережені змни з буфера
+        обміну. Зміни в буферу обміну зберігаются до того моменту поки проект
+        зберігається на компьютері. Вставити збережене можна в будь-який файл,
+        будь-якої гілки.
+      </p>
+      <hr />
+      <p>
+        <code>git diff</code> - показує зміни, яки були внесені в код після
+        останнього коміту. Поки є внизу дві крапочки, можемо скролити зміни за
+        допомогою клави (стрілочки вверх - вниз).
+      </p>
+      <p>Щоб вийти з режиму перегляду змін, треба натиснути клавішу "q".</p>
+      <hr />
+      <p>Подивитись історію коммітів в якійсь branch</p>
+      <code>git log</code>
+      <p>Натискаємо "q" щоб вийти з цього, та взагалі будь якого режимую.</p>
+      <hr />
+    </main>
+
+    <!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+    <p><code>git restore --staged &lt;file>...&gt;</code></p>
+
+    <h1>Commands for Git & GitHub</h1>
+    <h2>Initiation of Gid</h2>
+    <hr />
+    <p>Run the git init command in the project directory.</p>
+    <p><code>$ project_folder</code></p>
+    <hr />
+    <p><code>$ git init</code></p>
+    <p>If we want to add a file to a commit:</p>
+    <code>$ git add &lt;file&gt;</code>
+    <hr />
+    <p>If we want to add all files to a commit:</p>
+    <code>$ git add .</code>
+    <hr />
+    <p>To seal a commit, we must use the command:</p>
+    <code>$ git add commit -m "description of the commit"</code>
+    <hr />
+    <p>Synchronize a local repository with a remote one</p>
+    <code>$ git push repository_name branch</code>
+    <hr />
+    <p>Creating a new branch</p>
+    <code>$ git branch new_branch_name</code>
+    <hr />
+    <p>Switch to a new branch</p>
+    <code>$ git checkout new_branch_name</code>
+    <hr />
+    <p>To create a new branch and switch to it immediately</p>
+    <code>$ git checkout -b new_branch_name</code>
+    <hr />
+    <p>To move changes to the main branch:</p>
+    <code>$ git checkout main</code>
+    <code>$ git marge new_branch</code>
+    <hr />
+    <p>
+      The merge conflict is usually resolved manually. We need to decide which
+      code to keep and which to remove. After resolving the conflict, you need
+      to reconvene the commit and synchronize the repository.
+    </p>
+    <p>If you create a new task in a branch of the previous one.</p>
+
+    <hr />
+    <p>Roll back the commit.</p>
+    <code>@ git revert</code>
+    <hr />
+    <p>
+      So that the commit disappears but all the changes we made remain. After
+      that, the commit will disappear and the files will be marked as modified.
+    </p>
+    <hr />
+    <code>$ git reset --soft</code>
+
+    <p>
+      If someone has made changes to the files of the branch to which we want to
+      switch, Git will not allow it.
+    </p>
+    <hr />
+    <p>Hides all changes together</p>
+    <code>$ git stash</code>
+    <hr />
+    <p>
+      After saving the changes and switching to the new branch, we can apply the
+      changes to the existing state.
+    </p>
+    <code>$ git stash</code>
+    <code>$ git checkout main</code>
+    <code>$ git stash pop</code>
+    <hr />
+    <p>Returns the local repository to the state to be specified.</p>
+    <code>$ git reset --hard</code>
+    <hr />
+    <p><code>git clone</code> - копіює репозиторій з файлами на компьютер.</p>
+    <p>
+      <code>git branch "branchName"</code> - створює гілку з назвою
+      "branchName".
+    </p>
+    <hr />
+    <p>
+      <code>git checkout "branchName"</code> - переходить на гілку з назвою
+      "branchName".
+    </p>
+    <hr />
+    <p>
+      <code>git checkout -b "branchName"</code>
+      <code>git checkout -b header</code> - створює гілку з назвою "branchName"
+      і переходить на неї.
+    </p>
+    <hr />
+    <p><code>git add . </code> - зберігає зміни в файлах.</p>
+    <hr />
+    <p>
+      <code>git commit -m "commit message"</code> - підписуємо збережені зміни в
+      файлах.
+    </p>
+    <hr />
+    <p><code>git push</code> - відправляємо на сайт github.</p>
+    <hr />
+    <p><code>git pull</code> - отримуємо останні зміни з сайту github.</p>
+    <hr />
+    <p><code>git status</code> - показуємо статус проекту.</p>
+    <hr />
+    <p><code>git branch</code> - показує список гілок в проекті.</p>
+    <hr />
+    <p><code>git branch -r</code> - показує список гілок на сайті github.</p>
+    <hr />
+    <p>
+      <code>git branch -a</code> - показує список гілок на компьютері та на
+      сайті github.
+    </p>
+    <hr />
+    <p><code>git fetch</code> - отримуємо зміни з сайту github.</p>
+    <hr />
+
+    <p>
+      <code>git marge "banchName"</code> - зливаємо гілку з назвою "branchName"
+      в поточну гілку.
+    </p>
+    <hr />
+    <p><code>git marge --abbort</code> - відміняємо зливання гілок.</p>
+    <hr />
+    <p>
+      <code>git push --set-upstream origin header</code> або
+      <code>git push -u origin header</code> - створюємо на github гілку і
+      запушуємо код. Ця команда виконуєтся один раз після створення нової гілки.
+      Надалі файли запушуються без цієї команди.
+    </p>
+    <hr />
+    <p>
+      <code>git branch -d branch-name</code> - видалення гілки яка ще не
+      замарджина на GitHub.
+    </p>
+    <p>
+      <code>git branch -D branch-name</code> - примусове видалення гілки яка ще
+      не замарджина на GitHub.
+    </p>
+  </body>
+</html>

@@ -1,8 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
 body {
-  max-width: 1100px;
-  margin: 40px auto;
+  margin: 18px auto;
   font-family: sans-serif;
+  background-color: #404040;
+}
+
+header {
+  max-width: 1100px;
+  margin: 6px auto;
   background-color: #ccc;
   border: 2px solid #606060;
-  padding: 0 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 6px;
+}
+
+.block-flexbox-title {
+  text-align: center;
+  margin: 6px 0;
+}
+
+main {
+  max-width: 1100px;
+  margin: 6px auto;
+  background-color: #ccc;
+  border: 2px solid #606060;
+}
+
+.menu {
 }

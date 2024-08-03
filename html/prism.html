@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Editor Example</title>
+    <!-- Include Prism.js CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css"
+      rel="stylesheet"
+    />
+    <!-- Include Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+    <!-- Optional: Include language-specific Prism.js files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-css.min.js"></script>
+
+    <link rel="stylesheet" href="../css/prism.css" />
+    <!-- <style>
+      .code-editor {
+        background-color: #f5f5f5;
+        border: 1px solid #ccc;
+        padding: 16px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      pre {
+        background: #2d2d2d;
+        color: #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+    </style> -->
+  </head>
+  <body>
+    <div class="code-editor">
+      <h4>HTML Code</h4>
+      <pre><code class="language-html">
+
+        </code></pre>
+    </div>
+
+    <div class="code-editor">
+      <h4>CSS Code</h4>
+      <pre><code class="language-css">
+        
+  </code></pre>
+    </div>
+
+    <div class="code-editor">
+      <h3>HTML Code</h3>
+      <pre><code class="language-html">&lt;!-- Your HTML code here --&gt;
+&lt;div&gt;Hello, World!&lt;/div&gt;
+  </code></pre>
+    </div>
+
+    <div class="code-editor">
+      <h3>CSS Code</h3>
+      <pre><code class="language-css">/* Your CSS code here */
+div {
+  color: red;
+}
+  </code></pre>
+    </div>
+
+    <div class="code-editor">
+      <h4>Good code</h4>
+      <pre><code class="language-css">
+        @media (max-width: 767px) {
+  .box {
+    border: 1px solid black;
+  }
+}
+
+       @media (min-width: 768px) and (max-width: 1023px) {
+  .box {
+    box-shadow: 2px 2px 4px 2px black;
+  }
+}
+  </code></pre>
+    </div>
+
+    <div class="code-editor">
+      <h4>Базові стилі</h4>
+      <pre><code class="language-css">
+        .container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 1170px;
+  min-width: 320px;
+  maring: 0 auto;
+}
+  </code></pre>
+    </div>
+  </body>
+</html>
+
+<div class="code-editor">
+  <h4>Перша точка перелому</h4>
+  <pre><code class="language-css">
+        @media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .element {
+    flex-basis: calc((100% - 10px) / 2);
+  }
+}
+  </code></pre>
+</div>
+
+<div class="code-editor">
+  <h4>Друга точка перелому</h4>
+  <pre><code class="language-css">
+        @media screen and (min-width: 1024px) {
+  .container {
+    gap: 15px;
+  }
+
+  .element {
+    flex-basis: calc((100% - 30px) / 3);
+  }
+}
+  </code></pre>
+</div>
+
+<h4>Точки перелому</h4>
+<p>
+  <mark>Точки перелому (breakpoints)</mark> — це специфічні ширини області
+  перегляду (viewport), при яких дизайн веб-сторінки змінюється для забезпечення
+  оптимального відображення на різних пристроях. Ось три найпоширеніші точки
+  перелому та їхні значення:
+</p>
+<p>1. Перша точка перелому (мобільні пристрої):</p>
+<ul>
+  <li>Зазвичай використовується для смартфонів.</li>
+  <li>Типовий діапазон: від 320px до 600px.</li>
+  <li>Приклад медіа-запиту:</li>
+</ul>
+<div class="code-editor">
+  <h4>CSS Code</h4>
+  <pre><code class="language-css">
+      @media (max-width: 600px) {
+  /* стилі для мобільних пристроїв */
+}
+  </code></pre>
+</div>
+
+<p>2. Друга точка перелому (планшети):</p>
+<ul>
+  <li>Використовується для пристроїв середнього розміру, таких як планшети.</li>
+  <li>Типовий діапазон: від 600px до 900px</li>
+  <li>Приклад медіа-запиту:</li>
+</ul>
+
+<div class="code-editor">
+  <h4>CSS Code</h4>
+  <pre><code class="language-css">
+      @media (min-width: 600px) and (max-width: 900px) {
+  /* стилі для планшетів */
+}
+  </code></pre>
+</div>
+
+<p>3. Третя точка перелому (настільні комп'ютери):</p>
+<ul>
+  <li>
+    Використовується для великих екранів, таких як монітори настільних
+    комп'ютерів.
+  </li>
+  <li>Типовий діапазон: від 900px і більше.</li>
+  <li>Приклад медіа-запиту:</li>
+</ul>
+<div class="code-editor">
+  <h4>CSS Code</h4>
+  <pre><code class="language-css">
+      @media (min-width: 900px) {
+  /* стилі для настільних комп'ютерів */
+}
+  </code></pre>
+</div>
