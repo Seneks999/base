@@ -9,22 +9,27 @@
   <body>
     <header><h1>Набори команд для GitHub</h1></header>
     <main>
-      <nav>
-        <a href="#">one</a>
-        <a href="#">two</a>
-        <a href="#">three</a>
-        <a href="#">four</a>
-        <a href="#">five</a>
-        <a href="#">six</a>
-      </nav>
-      
-<h2>Це ті зміни, які мені треба перенести на свій комп</h2>
-      
+      <!-- Як відкатити гілку мейн до попереднього стану, який нас цікавить -->
+      <h2>Як відкатити гілку мейн до попереднього стану, який нас цікавить</h2>
+      <code>git log</code>
+      <p>
+        Копіюєм номер коміта в списку комітів, вставляємо після команди
+        <code>git checkout 72a6747c920f8dce49ec392aaccdd8363d7e596a</code>, і ми
+        переходимо в гілку, яка була в цьому коміті. Дивимось на код, якщо цей
+        код влаштовує то створюємо нову гілку і марджимо цю гілку в майн.
+      </p>
+      <p>
+        Інформацію з гілки мейн потрібно витягувти тоді, коли я закінчив свою
+        роботу, запушив зміни на GitHab своєї гілки, перед тім як я починаю
+        роботу над новою задачею.
+      </p>
+
       <!-- Приклад реальної роботи з GitHub -->
       <h2>Приклад реальної роботи з GitHub</h2>
       <p>Нам дали задачу зробити меню, ми це зробили і закомітили.</p>
       <p>
-        Перший рік, може більше, ми не будемо маржити в гілку мейн самостійно.
+        Перший рік, скорійш за все, ми не будемо маржити в гілку мейн
+        самостійно.
       </p>
       <p>Як ми працюємо на командному проекті:</p>
       <ul>
@@ -34,19 +39,24 @@
           тільки що запушена, і зелена кнопка Compare & pull request.
         </li>
         <li>
-          пулл реквест, це запит до тім-ліда, на те, щоб він перевірив наш код,
+          Пулл реквест, це запит до тім-ліда, на те, щоб він перевірив наш код,
           і якщо він правильний, прийняв його в основну гілку.
         </li>
         <li>
-          Обираємо гілку, перевіряємо що конфліктів немає, з якоє в яку гілку ми
+          Обираємо гілку, перевіряємо що конфліктів немає, з якої в яку гілку ми
           хочемо помістити код, і натискаємо кнопку Create pull request.
         </li>
         <li>Гарно його підписуємо.</li>
         <li>
-          Можно вибрати людей які будуть перевіряти мій шматок коду, натискаємо
+          Можно вибрати людей які будуть перевіряти мою частину коду, натискаємо
           кнопку Create pull request.
         </li>
       </ul>
+
+      <p>
+        Перед створенням нової гілки, для роботи на проекті, треба клонувати
+        репозиторій проекту собі на комп.
+      </p>
       <!-- Створення гілки -->
       <h2>Створення нової гілки, ...</h2>
       <p>
@@ -64,12 +74,16 @@
         "branchName" і переходить на неї.
       </p>
       <hr />
+
       <!-- Публікація на GitHub -->
-      <h2>Команди, щоб опублікувати свій footer на GitHub</h2>
-      <code>$ git add .</code>
+      <h2>Команди, щоб опублікувати свою гілку на GitHub</h2>
+      <code>git add .</code>
       <hr />
-      <p>To seal a commit, we must use the command:</p>
-      <code>$ git add commit -m "description of the commit"</code>
+      <p>
+        To seal a commit, we must use the command: Щоб запечатати комміт, ми
+        повинні використати команду:
+      </p>
+      <code>git add commit -m "description of the commit"</code>
       <hr />
       <p><code>git push</code> - відправляємо на сайт github.</p>
       <hr />
@@ -88,6 +102,7 @@
       <hr />
       <p>Далі операції які на проекті тімлід виконує самостійно</p>
       <hr />
+
       <!-- Зайти в гілку яку створив колега -->
       <h2>Як зайти в гілку яку створив колега, та подивитись що у нього.</h2>
       <p><code>git pull</code> - отримуємо останні зміни з сайту github.</p>
@@ -113,9 +128,10 @@
         index.html тої гілки, в яку ми перейшли.
       </p>
       <hr />
+
       <!-- Замарджити зміни -->
       <h2>
-        Як зміни які ми робили в своїй гілці зарелізити в основну гілку (опісля
+        Як зміни які ми робили в своїй гілці зарелізити в основну гілку (після
         перевірки ментором).
       </h2>
       <p>Ми маємо знаходитись в тій гілці в яку ми хочемо зробити marge.</p>
@@ -144,6 +160,7 @@
         "branchName" в поточну гілку.
       </p>
       <hr />
+
       <!-- Як видалити гілку -->
       <h2>Як видалити гілку.</h2>
       <p>
@@ -174,18 +191,15 @@
         Далі маємо знаходитись не тій гілці яку мерджім, і після цього merge
         потрібну гілку.
       </p>
-      <p>
-        <code>git push origin --delete "branchName"</code> - видалення гілки з
-        репозиторію другий спосіб.
-      </p>
       <hr />
+
+      <!-- Вирішення конфлікту -->
       <h2>Конфлікти merge та їх вирішення</h2>
       <p>Можно відкотити назад власний merge.</p>
       <p><code>git merge --abbort</code> - відміняємо merge (злиття гілок).</p>
       <hr />
-      <!-- Вирішення конфлікту -->
       <p>
-        Два шматки коду, які виділені різними кольорами, зверху над
+        Дві частини коду, які виділені різними кольорами, зверху над
         конфліктуючими блоками 5 варіантів дій, з яких можно вибрати одну. Ось
         ці варіанти:
       </p>
@@ -210,7 +224,6 @@
       <p>
         Потім видалити непотрібн гілку локально на компьютері, та на GitHub.
       </p>
-
       <p>
         <code>git branch -b "branchName"</code> - видалення гілки з компьютера.
       </p>
@@ -222,8 +235,10 @@
         <code>git push origin --delete "branchName"</code> - видалення гілки з
         репозиторію другий спосіб.
       </p>
-
       <hr />
+
+      <!-- Відплавлення змін в буфер обміну -->
+      <h2>Відправити зміни в буфер обміну, та завантаження з буферу</h2>
       <p>
         <code>git slash</code> - зберігаємо не збережені зміни в файлах і
         кладемо їх в буфер обміну.
@@ -249,27 +264,32 @@
       <hr />
     </main>
 
-    <!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+    <!-- Окремі команди для GitHub -->
+    <h1>Commands for Git & GitHub</h1>
     <p><code>git restore --staged &lt;file>...&gt;</code></p>
 
-    <h1>Commands for Git & GitHub</h1>
     <h2>Initiation of Gid</h2>
     <hr />
-    <p>Run the git init command in the project directory.</p>
-    <p><code>$ project_folder</code></p>
-    <hr />
-    <p><code>$ git init</code></p>
+    <p>
+      Run the git init command in the project directory. Запустіть команду git
+      init у каталозі проєкту.
+    </p>
+    <p><code>project_folder</code></p>
+    <p><code>git init</code></p>
     <p>If we want to add a file to a commit:</p>
-    <code>$ git add &lt;file&gt;</code>
+    <code>git add &lt;file&gt;</code>
     <hr />
     <p>If we want to add all files to a commit:</p>
-    <code>$ git add .</code>
+    <code>git add .</code>
     <hr />
-    <p>To seal a commit, we must use the command:</p>
-    <code>$ git add commit -m "description of the commit"</code>
+    <p>
+      To seal a commit, we must use the command: Щоб запечатати комміт, ми
+      повинні використати команду:
+    </p>
+    <code>git add commit -m "description of the commit"</code>
     <hr />
     <p>Synchronize a local repository with a remote one</p>
-    <code>$ git push repository_name branch</code>
+    <code>git push repository_name branch</code>
     <hr />
     <p>Creating a new branch</p>
     <code>$ git branch new_branch_name</code>
@@ -298,9 +318,11 @@
     <p>
       So that the commit disappears but all the changes we made remain. After
       that, the commit will disappear and the files will be marked as modified.
+      Так, щоб зобов'язання зникло, а всі зміни, які ми зробили, залишилися.
+      Після цього після цього коміт зникне, а файли будуть позначені як змінені.
     </p>
     <hr />
-    <code>$ git reset --soft</code>
+    <code>git reset --soft</code>
 
     <p>
       If someone has made changes to the files of the branch to which we want to
@@ -318,7 +340,10 @@
     <code>$ git checkout main</code>
     <code>$ git stash pop</code>
     <hr />
-    <p>Returns the local repository to the state to be specified.</p>
+    <p>
+      Returns the local repository to the state to be specified. Повертає
+      локальне сховище до стану, який потрібно вказати.
+    </p>
     <code>$ git reset --hard</code>
     <hr />
     <p><code>git clone</code> - копіює репозиторій з файлами на компьютер.</p>
