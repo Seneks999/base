@@ -7,6 +7,81 @@
     <title>Document</title>
   </head>
   <body>
+    <section>
+      <h2>Підключення до бандлера проєкту "Vite"</h2>
+      <code><mark>git clone</mark></code> - клоенуємо репозиторій;
+      <code><mark>npm i</mark></code> - встановлюємо залежність (один раз після
+      клонування); <code><mark>npm run dev</mark></code> - запускаємо режим
+      розробки для відображення живої сторінки (кожного разу після
+      перезавантаження VsCode)
+      <code><mark>git switch -c "branch-name”</mark></code>
+    </section>
+
     <div class="box">Перевірка</div>
+
+    <form>
+      <!-- Email input -->
+
+      <div class="input">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          pattern="([A-Za-z0-9_.-]{1,})@([A-Za-z0-9_.-]{1,}).([A-Za-z]{2,8})"
+          title="Enter a valid email address. e.g., example@mail.com"
+        />
+      </div>
+
+      <!-- Phone input -->
+      <div class="input">
+        <label for="phone">Phone:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          pattern="^\+\d{2}-\d{3}-\d{3}-\d{2}-\d{2}$"
+          title="Enter a valid phone number. e.g., +12-345-678-90-12"
+        />
+      </div>
+
+      <!-- Textarea input -->
+      <div class="textarea-input">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit">Send</button>
+    </form>
+
+    <div class="rentayacht-img">
+      <picture
+        ><source
+          srcset="
+            ./rentayacht-img/rentayacht-desktop-@1x.jpg 1x,
+            ./rentayacht-img/rentayacht-desktop-@2x.jpg 2x
+          "
+          media="(min-width:1280px)" />
+        <source
+          srcset="
+            ./rentayacht-img/rentayacht-tablet-@1x.jpg 1x,
+            ./rentayacht-img/rentayacht-tablet-@2x.jpg 2x
+          "
+          media="(min-width:768px)" />
+        <source
+          srcset="
+            ./rentayacht-img/rentayacht-mob-@1x.jpg 1x,
+            ./rentayacht-img/rentayacht-mob-@2x.jpg 2x
+          "
+          media="(max-width:767px)" />
+        <img
+          src="./rentayacht-img/rentayacht-desktop-@1x.jpg"
+          alt="Yacht for rent"
+          width="658"
+      /></picture>
+    </div>
   </body>
 </html>

@@ -1,0 +1,20 @@
+dfn {
+  all: unset; /* Прибирання всіх стилів за замовчуванням */
+  font-weight: bold; /* Задайте ваші власні стилі */
+}
+
+body {
+  font-family: sans-serif;
+  max-width: 1200px;
+  height: 100vh;
+  overflow: auto;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 18px;
+}
+
+ul {
+  font-size: 18px;
+}
